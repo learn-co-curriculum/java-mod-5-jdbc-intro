@@ -56,10 +56,10 @@ If not, copy the dependency and press the IntelliJ icon to load the Maven change
 
 Once the database exists, we can run the example program `ConnectionTest`
 to test if the PostgreSQL driver can get a connection to the database.
-The program relies on two JDBC classes:
+The program relies on the following JDBC class and interface:
 
-- **DriverManager** : Provides basic services for managing database drivers.
-- **Connection** : Represents a connection (session) with a specific database
+- **DriverManager** : A class that provides basic services for managing database drivers.
+- **Connection** : An interface that represents a connection (session) with a specific database
   that can execute SQL statements.
 
 We use the `DriverManager.getConnection()` method to open a connection to the database.
@@ -108,4 +108,6 @@ PostgreSQL database.
 
 - [JDBC API](https://docs.oracle.com/javase/8/docs/api/java/sql/package-summary.html)    
 - [PostgreSQL JDBC Driver](https://jdbc.postgresql.org/download/)    
-- [JDBC Tutorial](https://docs.oracle.com/javase/tutorial/jdbc/basics/index.html)  
+- [JDBC Tutorial](https://docs.oracle.com/javase/tutorial/jdbc/basics/index.html)   
+- [java.sql.DriverManager](https://docs.oracle.com/en/java/javase/11/docs/api/java.sql/java/sql/DriverManager.html)  
+- [java.sql.Connection](https://docs.oracle.com/en/java/javase/11/docs/api/java.sql/java/sql/Connection.html)   

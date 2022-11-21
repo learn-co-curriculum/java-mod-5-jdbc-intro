@@ -1,4 +1,6 @@
-import java.sql.*;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
 
 public class ConnectionTest {
 
@@ -7,16 +9,11 @@ public class ConnectionTest {
     static final String PASSWORD = "postgres";
 
     public static void main(String[] args) {
-        try {
-            //Establish a connection to the database
-            Connection connection = DriverManager.getConnection(DB_URL, USER, PASSWORD);
+        //Establish a connection to the database
+        try (Connection connection = DriverManager.getConnection(DB_URL, USER, PASSWORD)) {
             System.out.println("Connected to database");
-
-            //Close the connection
-            connection.close();
         } catch (SQLException e) {
             System.out.println(e.getMessage());
         }
-
     }
 }
